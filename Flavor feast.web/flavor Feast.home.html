@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Book App</title>
+
+    <style>
+        /* Navbar styling */
+.navbar {
+    background: #ff9f43; /* Orange */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    background: white;
+    color: #ff9f43;
+    transform: scale(1.05);
+}
+
+        /* Hero Section */
+        .hero {
+            background: url(https://play-lh.googleusercontent.com/h5Wo3eRcsLxrCiodneqAONrwlQ4ceFlImiBnBmG7JJSz9e1LzvgQqj7gM_bReTVMMCQ) center/cover;
+            height:auto;
+            width:auto;
+            padding: 90px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+        }
+
+        .hero p {
+            margin: 15px 0;
+            font-size: 18px;
+        }
+
+        .btn {
+            padding: 10px 18px;
+            background: #ffbe76;
+            color: black;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: white;
+        }
+
+        /* Recipe Section */
+        .recipe-section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .recipe-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .recipe-card {
+            width: 250px;
+            background: #fff9e6;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .recipe-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .view-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 12px;
+            background: #ff9f43;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .view-btn:hover {
+            background: #e67e22;
+        }
+        .footer {
+  background-color: #222;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px;
+}
+
+.footer-links li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: #ff9800;
+}
+
+.footer p {
+  color: #ccc;
+  font-size: 12px;
+}
+    </style>
+
+</head>
+
+<body>
+
+   <!-- Navigation Bar -->
+    <nav class="navbar">
+        <h2 class="logo">Recipe Book</h2>
+        <ul class="nav-links">
+            <li><a href="flavor Feast.home.html">Home</a></li>
+            <li><a href="Flavor Feast.recipe.html">Recipe</a></li>
+            <li><a href="Flavor Feast.bmi.html">BMI</a></li>
+            <li><a href="Flavor Feast.contact.html">Contact</a></li>
+            <li><a href="Flavor Feast.about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>Welcome to the Recipe Book App</h1>
+        <p>Discover delicious dishes made just for you!</p>
+        <a class="btn" href="#recipes">Explore Recipes</a>
+    </header>
+
+    <!-- Recipe Section -->
+    <section id="recipes" class="recipe-section">
+        <h2 class="section-title">Our Top Recipes</h2>
+
+        <div class="recipe-container">
+
+            <div class="recipe-card">
+                <img src="https://www.priyom.in/wp-content/uploads/2022/05/recipe-1.png" />
+                <h3>Recipe 1</h3>
+                <p>Ingredients:Bangladeshi Kacchi – Ingredients:
+Mutton
+Basmati rice
+Yogurt
+Ginger paste
+Garlic paste
+Fried onions (beresta)
+Green chilies
+Potatoes
+Mustard oil
+Ghee
+Saffron or food color
+Milk
+Whole spices (bay leaf, cardamom, cinnamon, cloves)
+Salt
+Sugar (a pinch)</p>
+                <a href="file:///C:/Users/DELL/Desktop/flavor%20feast.web/Flavor%20Feast.recipe.html" class="view-btn">View Recipe</a>
+            </div>
+
+            <div class="recipe-card">
+                <img src="https://www.sharmispassions.com/wp-content/uploads/2011/01/VegFriedRice1.jpg" height="200px" weight="200px">
+                <h3>Recipe 2</h3>
+                <p>Ingredients:Cooked rice (cold),Oil,Garlic (chopped),Mixed vegetables (carrot,beans,peas,capsicum),Soy sauce,Salt,Black pepper,Spring onions(optional)</p>
+                <a href="file:///C:/Users/DELL/Desktop/flavor%20feast.web/Flavor%20Feast.recipe.html" class="view-btn">View Recipe</a>
+            </div>
+
+            <div class="recipe-card">
+                <img src="https://thewannabecook.com/wp-content/uploads/2023/01/Bhuna-Khichuri.png"height="200px" weight="200px" >
+                <h3>Recipe 3</h3>
+                <p>Ingredients:Rice,Moong dal (yellow lentils),Oil or ghee,Onion (sliced),Ginger–garlic paste,Green chilies,Turmeric powder,Cumin powder,Bay leaf,Cinnamon & cardamom,Salt,Water.</p>
+                <a href="file:///C:/Users/DELL/Desktop/flavor%20feast.web/Flavor%20Feast.recipe.html" class="view-btn">View Recipe</a>
+            </div>
+
+        </div>
+    </section>
+<footer class="footer">
+    <h5 style="text-align:center; color: white;">Quick links</h5>
+  <ul class="footer-links">
+    <li><a href="Flavor Feast.home.html">Home</a></li>
+    <li><a href="Flavor Feast.recipe.html">Recipes</a></li>
+    <li><a href="Flavor Feast.about.html">About</a></li>
+    <li><a href="Flavor Feast.contact.html">Contact</a></li>
+  </ul>
+  <p>© 2025 Recipe Website</p><br>
+  <p> All right Reserved to - flavorfeast Website. This website is developed as an academic project. </p>
+  <img src="C:\Users\DELL\Desktop\Flavor Feast .home..avif" width="100px">
+</footer>
+
+</body>
+</html>

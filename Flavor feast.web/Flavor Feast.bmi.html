@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff7e6;
+            margin: 0;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #ff9f43; 
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .nav-links li a:hover {
+            background: white;
+            color: #ff9f43;
+            transform: scale(1.05);
+        }
+
+        @media screen and (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+                gap: 10px;
+                margin-top: 10px;
+            }
+            .nav-links li a {
+                width: 100%;
+                display: block;
+                text-align: center;
+            }
+        }
+
+        /* BMI Section */
+        .bmi-section {
+            max-width: 400px;
+            margin: 50px auto;
+            background: #fff9e6;
+            padding: 30px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .bmi-section h2 {
+            color: #ff9f43;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .bmi-section label {
+            display: block;
+            text-align: left;
+            margin: 10px 0 5px;
+            font-weight: 500;
+        }
+
+        .bmi-section input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        .bmi-section button {
+            padding: 10px 20px;
+            background: #ff9f43;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .bmi-section button:hover {
+            background: #e67e22;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            margin: 30px auto;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            border: 2px solid black;
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        caption {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        h1 {
+            color: #ff9f43;
+        }
+.footer {
+  background-color: #222;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px;
+}
+
+.footer-links li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: #ff9800;
+}
+
+.footer p {
+  color: #ccc;
+  font-size: 12px;
+}
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h2 class="logo">Recipe Book</h2>
+        <ul class="nav-links">
+            <li><a href="flavorfeast.home.html">Home</a></li>
+            <li><a href="Flavor Feast.recipe.html">Recipe</a></li>
+            <li><a href="Flavor Feast.bmi.html">BMI</a></li>
+            <li><a href="Flavor Feast.contact.html">Contact</a></li>
+            <li><a href="Flavor Feast.about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- BMI Section -->
+    <section class="bmi-section">
+        <h2>Check Your BMI</h2>
+        <form onsubmit="BMIcalculation(); return false;">
+            <label for="height">Enter your height (meters):</label>
+            <input type="number" id="height" step="0.01" >
+
+            <label for="weight">Enter your weight (kg):</label>
+            <input type="number" id="weight" step="0.1" >
+
+            <button type="submit">Calculate BMI</button>
+        </form>
+        <p id="result"></p>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        function BMIcalculation() {
+            const height = parseFloat(document.getElementById("height").value);
+            const weight = parseFloat(document.getElementById("weight").value);
+
+            if (!height || !weight || height <= 0 || weight <= 0) {
+                document.getElementById("result").textContent =
+                    "❌ Please enter valid positive values for height and weight.";
+                return;
+            }
+
+            const bmi = weight / (height * height);
+            const bmiRounded = bmi.toFixed(2);
+
+            let category = "";
+            if (bmi < 18.5) category = "Underweight";
+            else if (bmi >= 18.5 && bmi <= 24.9) category = "Healthy Weight";
+            else if (bmi >= 25 && bmi <= 29.9) category = "Overweight";
+            else category = "Obesity";
+
+            document.getElementById("result").textContent =
+                `Your BMI is: ${bmiRounded} (${category})`;
+
+            console.log("Height:", height);
+            console.log("Weight:", weight);
+            console.log("BMI:", bmiRounded);
+            console.log("Category:", category);
+        }
+    </script>
+<body>
+<table>
+   <caption><h1><b>BMI Range Table</b></h1></caption>
+    <tr>
+        <th>Category</th>
+        <th>BMI range (kg/m²)</th>
+    </tr>
+    <tr>
+        <td>Underweight</td>
+        <td>Less than 18.5</td>
+    </tr>
+    <tr>
+        <td>Normal weight</td>
+        <td>18.5 – 24.9</td>
+    </tr>
+    <tr>
+        <td>Overweight</td>
+        <td>25 – 29.9</td>
+    </tr>
+    <tr>
+        <td>Obese</td>
+        <td>30 & above</td>
+    </tr>
+</table>
+<footer class="footer">
+    <h5 style="text-align:center; color: white;">Quick links</h5>
+  <ul class="footer-links">
+    <li><a href="Flavor Feast .home.html">Home</a></li>
+    <li><a href="Flavor Feast.recipe.html">Recipes</a></li>
+    <li><a href="Flavor Feast.about.html">About</a></li>
+    <li><a href="Flavor Feast.contact.html">Contact</a></li>
+  </ul>
+  <p>© 2025 Recipe Website</p><br>
+  <p> All right Reserved to - flavorfeast Website. This website is developed as an academic project. </p>
+  <img src="flavor feast.jpg.jpeg" width="100px">
+</footer>
+</body>
+</html>

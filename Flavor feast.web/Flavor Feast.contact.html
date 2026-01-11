@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contact-section {
+    padding: 50px 20px;
+    text-align: center;
+    background: #fff9e6;
+}
+
+.contact-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.contact-section form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-section input,
+.contact-section textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.contact-section button {
+    padding: 10px;
+    background: #ff9f43;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-section button:hover {
+    background: #e67e22;
+}
+/* Navbar styling */
+.navbar {
+    background: #ff9f43; /* Orange */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    background: white;
+    color: #ff9f43;
+    transform: scale(1.05);
+}
+
+/* Responsive small screen */
+@media screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    .nav-links li a {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+}
+.footer {
+  background-color: #222;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px;
+}
+
+.footer-links li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: #ff9800;
+}
+
+.footer p {
+  color: #ccc;
+  font-size: 12px;
+}
+    </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+    <nav class="navbar">
+        <h2 class="logo">Recipe Book</h2>
+        <ul class="nav-links">
+            <li><a href="flavorfeast.home.html">Home</a></li>
+            <li><a href="Flavor Feast.recipe.html">Recipe</a></li>
+              <li><a href="Flavor Feast.bmi.html">BMI</a></li>
+      <li><a href="Flavor Feast.contact.html">Contact</a></li>
+               <li><a href="Flavor Feast.about.html">About</a></li>
+        </ul>
+    </nav>
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+    <form 
+    action="https://formspree.io/f/xojjabzq"
+    method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="Your Message" rows="4" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+<footer class="footer">
+    <h5 style="text-align:center; color: white;">Quick links</h5>
+  <ul class="footer-links">
+    <li><a href="Flavor Feast .home.html">Home</a></li>
+    <li><a href="Flavor Feast.recipe.html">Recipes</a></li>
+    <li><a href="Flavor Feast.about.html">About</a></li>
+    <li><a href="Flavor Feast.contact.html">Contact</a></li>
+  </ul>
+  <p>© 2025 Recipe Website</p><br>
+  <p> All right Reserved to - flavorfeast Website. This website is developed as an academic project. </p>
+  <img src="flavor feast.jpg.jpeg" width="100px">
+</footer>
+</body>
+</html>
+
+
+
+

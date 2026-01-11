@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="priyabmi.css" /> 
+    <style>
+        /* Navbar styling */
+.navbar {
+    background: #ff9f43; /* Orange */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    background: white;
+    color: #ff9f43;
+    transform: scale(1.05);
+}
+
+/* Responsive small screen */
+@media screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    .nav-links li a {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+}
+.footer {
+  background-color: #222;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px;
+}
+
+.footer-links li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: #ff9800;
+}
+
+.footer p {
+  color: #ccc;
+  font-size: 12px;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <h2 class="logo">Recipe Book</h2>
+        <ul class="nav-links">
+            <li><a href="Flavor Feast.home.html">Home</a></li>
+            <li><a href="Flavor Feast.recipe.html">Recipe</a></li>
+            <li><a href="Flavor Feast.bmi.html">BMI</a></li>
+            <li><a href="Flavor Feast.contact.html">Contact</a></li>
+            <li><a href="Flavor Feast.about.html">About</a></li>
+        </ul>
+    </nav>
+
+    
+    <div class="Container">
+    <ul id= "recipe-list">
+                <li class="recipe-item">
+                    <img src="https://www.priyom.in/wp-content/uploads/2022/05/recipe-1.png"  alt="Recipe 1" height="200px" weight="200px" >
+                    <h2>Recipe 1</h2>
+                    <p>
+                        <strong>
+Ingredients:
+Mutton,
+Basmati rice,
+Yogurt,
+Ginger paste,
+Garlic paste,
+Fried onions(beresta),
+Green chilies,
+Potatoes,
+Mustard oil,
+Ghee,
+Saffron or food color,
+Milk,
+Whole spices(bay leaf, cardamom, cinnamon, cloves),
+Salt,
+Sugar(a pinch).
+                        </strong>
+                        
+                        
+                    </p>
+                    <a href="https://youtu.be/LL3pxnuQDRY?si=iyuLvyY5e31P78su">View recipe</a>
+                </li>
+                <br><br>
+                <li class="recipe-item">
+                    <img src="https://www.sharmispassions.com/wp-content/uploads/2011/01/VegFriedRice1.jpg"   alt="Recipe 2" height="200px" weight="200px">
+                    <h2>Recipe 2</h2>
+                    <p>
+                        <strong>
+                            Ingredients:
+                            Cooked rice (cold),Oil,Garlic (chopped),Mixed vegetables (carrot,beans,peas,capsicum),Soy sauce,Salt,Black pepper,Spring onions(optional)
+                        </strong>
+                    </p>
+                    <a href="https://youtu.be/ZTgVFe4_H-s?si=jOs1OdIeBjLpw1ru">View recipe</a>
+                </li>
+<br><br>
+                <li class="recipe-item">
+                    <img src="https://thewannabecook.com/wp-content/uploads/2023/01/Bhuna-Khichuri.png" alt="Recipe 3" height="200px" weight="200px">
+                    <h2>Recipe 3
+                        
+                    </h2>
+                    <p>
+                        <strong>
+                            Ingredients:Rice,Moong dal (yellow lentils),Oil or ghee,Onion (sliced),Gingergarlic paste,Green chilies,Turmeric powder,Cumin powder,Bay leaf,Cinnamon & cardamom,Salt,Water.
+                        </strong>
+                        
+                    </p>
+                    <a href="https://youtu.be/wfYDlprWAvE?si=MdWIHzktcf_7AS3L">View recipe</a>
+                </li>
+                <br><br>
+                <li class="recipe-item">
+                    <img src="https://mangoesmagic.com/wp-content/uploads/2024/05/A-view-of-mango-juice-in-glass-with-a-straw-alongside-cubed-mangoes-1024x1024-2.jpg" alt="Recipe 4"height="200px" weight="200px">
+                    <h2>Recipe 4
+                        
+                    </h2>
+                    <p>
+                        <strong>
+                            Ingredients:Ripe mangoes (peeled & chopped),Sugar or honey (to taste),Cold water or milk,Ice cubes (optional)
+                        </strong>
+                        
+                    </p>
+                     <a href="https://youtu.be/2vNbdTQP0ko?si=8AYfVu9uzNcE4Wfq">View recipe</a>
+                </li>
+                <br><br>
+                <li class="recipe-item">
+                    <img src="https://images.stockcake.com/public/a/1/6/a1634f35-7e44-4f22-ad2f-58c75014cd82_large/colorful-juice-splash-stockcake.jpg" alt="Recipe 5"height="200px" weight="200px">
+                    <h2>Recipe 5
+                        
+                    </h2>
+                    <p>
+                        <strong>Ingredients:Fresh oranges,Sugar or honey(optional),Water(optional)
+                        
+                        </strong>
+                    
+                    </p>
+                    <a href="https://youtu.be/w6IjwKOB_t8?si=R3QfOUNINOCC7zpB">View recipe</a>
+                <li class="recipe-item">
+                    <img src="https://www.sharmispassions.com/wp-content/uploads/2020/12/30844725996_54eb93b4a5_o.jpg" alt="Recipe 6" height="200px" weight="200px">
+                    <h2>Recipe 6
+                        
+                    </h2>
+                    <p>
+                        <strong>
+                            Ingredients:2 eggs,2 bread slices,1 small onion (finely chopped),1 green chili (chopped),Salt & black pepper,Oil or butter,2 bread slices,1 small onion (finely chopped),1 green chili (chopped),Salt & black pepper,Oil or butter
+                        </strong>
+                        
+                    </p>
+                    <a href="https://youtu.be/QzuXzLtYUpE?si=rlDB3FMjaTIhqAd-">View recipe</a> 
+                </li>
+            
+            </ul>
+        </div>
+        <footer class="footer">
+    <h5 style="text-align:center; color: white;">Quick links</h5>
+  <ul class="footer-links">
+    <li><a href="Flavor Feast.home.html">Home</a></li>
+    <li><a href="Flavor Feast.recipe.html">Recipes</a></li>
+    <li><a href="Flavor Feast.about.html">About</a></li>
+    <li><a href="Flavor Feast.contact.html">Contact</a></li>
+  </ul>
+  <p>© 2025 Recipe Website</p><br>
+  <p> All right Reserved to - flavorfeast Website. This website is developed as an academic project. </p>
+  <img src="C:\Users\DELL\Desktop\Flavor Feast .home..avif" width="100px">
+</footer> 
+</body>
+</html>
